@@ -1,0 +1,291 @@
+.mainMenu
+{
+	padding: 0;
+	float: right;
+	> ul{
+		list-style: none;
+		> li{
+			float: left;
+			position: relative;
+			&:first-child
+			{
+				> a{
+					padding-left: 4.8rem;				
+					img{
+						left: 0;
+					}
+				}
+			}
+			img{
+				&:hover
+					{
+						color: #151515;
+					}
+			}
+			> a{
+				padding: 3rem 0 2rem 0;
+				display: block;
+				position: relative;
+				padding-left: 9.2rem;
+				font-family: @primaryFont;
+				font-weight: 700;
+				font-size: 1.7rem;
+				color: #434a54;
+				span 
+				{					
+					display: block;
+					font-size: 1.3rem;
+					color: #9ca5b2;
+					font-weight: 400;
+				}
+				&:hover
+				{
+					text-decoration: none;
+				}
+				img{
+					position: absolute;
+					font-size: 2.7rem;
+					left: 4.4rem;
+					margin-top: 0.7rem;
+				}
+				.fa-home{
+						color: #fa745c;
+					}
+				.fa-graduation-cap{
+						color: #a6d575;
+					}
+				.fa-users{
+					color: #56c1e7;
+				}
+				.fa-cog{
+					color: #bfacee;
+				}
+				.fa-book{
+					color: #fa725b;
+				}
+			}	
+			ul{
+				z-index: 201;
+				left: 3rem;
+				background: #a1d36e;
+				padding: 0;
+				border:1px solid #7db840;
+				width: 22rem;
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+				.translateY(2.5rem);
+				.transition;
+				li{
+					display: block;
+					a{
+						padding: 1rem 2rem;
+						display: block;
+						color: white;
+						font-family: @primaryFont;
+						font-weight: 400;
+						font-size: 1.5rem;
+						border-bottom: 1px solid #7db840;
+						&:hover{
+							text-decoration: none;							
+						}
+					}
+					&:last-child
+					{
+						a{
+							border-bottom: none;
+						}
+					}
+
+				}
+				&:before{
+					content: '';
+					border-width: 0 9px 9px 9px;
+  					border-color: transparent transparent #7db840 transparent;
+  					border-style: solid;
+  					top: -0.9rem;
+  					left: 3rem;
+  					position: absolute;
+					display: block;
+					width: 0;
+					height: 0;
+				}
+			}
+			&:hover
+			{
+				ul
+				{
+					opacity: 1;
+					visibility: visible;
+					.translateY(0);
+				}
+			}
+		}
+	}
+}
+
+/*******************************************************************************/
+/*DROPDOWN COLORS */
+/*******************************************************************************/
+
+/*Teachers*/
+#bs-example-navbar-collapse-1 > nav > ul > li:nth-child(3) > ul
+{
+	background: #55c1e7;
+	border:1px solid #3ba5ca;
+	a{
+		border-bottom: 1px solid #3ba5ca;
+	}
+	&:before{
+		 border-color: transparent transparent #3ba5ca transparent;
+	}
+}
+
+/*Pages*/
+#bs-example-navbar-collapse-1 > nav > ul > li:nth-child(4) > ul
+{
+	background: #ac94e9;
+	border:1px solid #8d6be4;
+	a{
+		border-bottom: 1px solid #8d6be4;
+	}
+	&:before{
+		 border-color: transparent transparent #8d6be4 transparent;
+	}
+}
+
+/*Blog*/
+#bs-example-navbar-collapse-1 > nav > ul > li:nth-child(5) > ul
+{
+	background: @theme-color-base;
+	border:1px solid #e75845;
+	a{
+		border-bottom: 1px solid #e75845;
+	}
+	&:before{
+		 border-color: transparent transparent #e75845 transparent;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Here we will add css for menu.
+
+@media (max-width: 1620px) {
+	
+}
+
+@media (max-width: 1420px) {
+	
+}
+
+@media (max-width: 1220px) {
+	
+}
+
+@media (max-width: 1030px) {
+	.mainMenu{
+		float: inherit;
+		img{
+			display: none;
+		}
+	}
+	.mainMenu > ul > li > a{
+		padding-left: 4.4rem;
+		}
+	.mainMenu > ul > li:first-child > a{
+		padding-left: 4.8rem;
+		
+	}
+}
+
+
+
+
+@media (max-width: 800px) {
+	.mainMenu{
+		position: relative;
+		z-index: 201;
+  		background: #fff;
+		float: inherit;
+		>ul >li{
+			float: inherit;
+			position: inherit;
+		}
+		img{
+			display: none;
+		}
+	}
+	.mainMenu > ul > li > a{
+		span{
+			display: none;
+		}
+	}
+	.mainMenu > ul > li > a{
+		padding-left: 0!important;
+	}
+	.mainMenu > ul > li ul{
+		visibility: visible;
+		position: relative;
+		display: block;
+		opacity: 1;
+		width: 100%;
+		left: 0;
+		display: none;
+		background: inherit!important;
+		border: none!important;
+		.translateY(0);
+		&:before{
+			display: none;
+		}
+	}
+	.mainMenu > ul > li ul li a{
+		border: none!important;
+		color: #434a54;
+	}
+	.mainMenu > ul > li > a{
+		padding: 1rem 0;
+	}
+	.mainMenu > ul > li:hover{
+		ul{
+			display: block;
+		}
+		a:hover{
+			color: #Fff;
+			padding-left: 0.5rem!important;
+			background: @theme-color-base;
+		}
+		a{
+			.transition;
+		}
+	}
+}
+
+@media (min-width: 800px){
+	.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{
+		display: block!important;
+  		visibility: visible!important;
+  		opacity: 1!important;
+	}
+}
+
+@media (max-width: 500px) {
+	
+}
+
+@media (max-width: 330px) {
+	
+}

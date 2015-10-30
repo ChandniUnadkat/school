@@ -1,0 +1,344 @@
+// Here we will add css for the blog components like : the comment form, special typography, special breadcrumbs, the feature image etc.
+
+.alignleft {
+	float: left;
+	margin-right: 2rem;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	margin-left: 2rem;
+	text-align: right;
+}
+
+.aligncenter {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.alignnone , .aligncenter , .alignleft , .alignright {
+	max-width: 100%;
+	margin-bottom: 2rem;
+}
+
+div.author-info {
+	padding: 3rem;
+	margin-top: 3rem;
+	.left-author-info {
+		float: left;
+		margin: 1.2rem;
+		figure {
+			overflow: hidden;
+			width: 6rem;
+			height: 6rem;
+			border-radius: 50%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.right-author-info {
+		margin-left: 11rem;
+		h1 {
+			margin-top: 0;
+			color: #31393e;
+			font-size: 2.1rem;
+		}
+		p {
+			color: #a2a2a2;
+			font-size: 1.5rem;
+			line-height: 2.3rem;
+		}
+	}
+}
+
+.comment-form-theme , .comments .comment-respond {
+	text-align: center;
+	> h3 {
+		text-transform: uppercase;
+		color: #404041;
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+		small {
+			a {
+				text-transform: uppercase;
+				color: #404041;
+				font-size: 1.6rem;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	ul {
+		padding-left: 0;
+		list-style: none;
+		margin-bottom: 2rem;
+		&:after , &:before {
+			content: " ";
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+		li {
+			width: 33.333333333333333%;
+			float: left;
+			padding: 0 1rem;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			input {
+				border: 2px solid #e6e6e6;
+				border-radius: 0.5rem;
+				background: #fafafa;
+				padding: 0.7rem 1.5rem;
+				color: #8e8e8e;
+				text-transform: none;
+				width: 100%;
+				&::-webkit-input-placeholder {
+					color: #8e8e8e;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+						color: #8e8e8e;
+				}
+				&::-moz-placeholder {	/* Firefox 19+ */
+						color: #8e8e8e;
+				}
+				&:-ms-input-placeholder {	
+						color: #8e8e8e;
+				}
+			}
+		}
+	}
+	textarea {
+		border: 2px solid #e6e6e6;
+		border-radius: 0.5rem;
+		background: #fafafa;
+		padding: 0.7rem 1.5rem;
+		color: #8e8e8e;
+		text-transform: none;
+		width: 100%;
+		&::-webkit-input-placeholder {
+			color: #8e8e8e;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+				color: #8e8e8e;
+		}
+		&::-moz-placeholder {	/* Firefox 19+ */
+				color: #8e8e8e;
+		}
+		&:-ms-input-placeholder {	
+				color: #8e8e8e;
+		}
+	}
+	.comment-respond {
+		margin-top: 2rem;
+	}
+	.form-submit {
+		position: relative;
+		z-index: 1;
+		border-radius: 0.5rem;
+		margin-bottom: 0;
+		display: inline-block;
+		margin-top: 2rem;
+		border: 2px solid #e6e6e6;
+		input[type=submit] {
+			margin: 0;
+			border: none;
+			background: transparent;
+			border-radius: 0.5rem;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			color: #c86ea6;
+			font-family: 'Open Sans';
+			font-weight: 600;
+			text-transform: uppercase;
+			padding: 1.3rem 3.3rem;
+			position: relative;
+			z-index: 1;
+			.transition(0.4s);
+		}
+	}	
+}
+
+.comment-container {
+	.title-comments {
+		text-align: center;
+		font-size: 2.5rem;
+		color: #404041;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-family: 'Open Sans';
+	}
+	ul.comments {
+		padding-left: 0;
+		margin-top: 6rem;
+		list-style: none;
+		ul.children {
+			list-style: none;
+			padding-left: 0;
+			margin-left: -6rem;
+		}
+		ul:not(.children) , ol:not(.children) {
+			padding-left: 3rem;
+			li {
+				padding-left: 0;
+			}
+		}
+		ul:not(.children) {
+			list-style-type: square;
+		}
+		li {
+			padding-left: 12rem;
+			.comment , .pingback {
+				margin-bottom: 5.5rem;
+				.left-section {
+					position: absolute;
+					width: 8rem;
+					margin-left: -12rem;
+					img {
+						width: 100%;
+						border-radius: 50%;
+					}
+				}
+				.right-section {
+					ul {
+						padding-left: 3rem;
+					}
+					width: 100%;
+					padding-top: 1px;
+					h1 {
+						line-height: 1.6rem;
+						margin-bottom: 0;
+						margin-top: 0;
+						a {
+							font-size: 1.6rem;
+							color: #404041;
+							text-transform: uppercase;
+							font-family: 'Open Sans';
+							font-weight: 500;
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
+					a.comment-reply-link {
+						float: right;
+						color: #404041;
+						font-size: 1.5rem;
+						text-transform: capitalize;
+						margin-top: 1rem;
+						font-family: 'Open Sans';
+						font-style: italic;
+						&:hover {
+							text-decoration: none;
+						}
+						i {
+							color: #5e5e5e;
+							margin-right: 0.5rem;
+						}
+					}
+					.time-comment {
+						font-size: 1.4rem;
+						color: #b4b4b4;
+						font-weight: 400;
+						font-family: 'Open Sans';
+						margin-top: 0px;
+					}
+					.comment-text {
+						p {
+							color: #777777;
+							font-size: 1.4rem;
+							line-height: 1.6em;
+						}
+					}
+				}
+				&.depth-3 {
+					.comment-reply-link {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1620px) {
+	
+}
+
+@media (max-width: 1420px) {
+	
+}
+
+@media (max-width: 1220px) {
+	
+}
+
+@media (max-width: 1030px) {
+	.comment-container {
+		ul.comments {
+			ul.children {
+				margin-left: 2rem;
+			}
+			li {
+				padding-left: 0;
+				.comment , .pingback {
+					.left-section {
+						position: relative;
+						width: 6rem;
+						margin-left: 0;
+						margin-bottom: 2rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.comment-form-theme , .comments .comment-respond {
+		ul {
+			margin-bottom: 1rem;
+			li {
+				width: 100%;
+				float: none;
+				padding-bottom: 1rem;
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	div.author-info {
+		.left-author-info {
+			float: none;
+			margin-left: 0;
+			margin-top: 0;
+			figure {
+				overflow: hidden;
+				width: 8rem;
+				height: 8rem;
+			}
+		}
+		.right-author-info {
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 330px) {
+	
+}

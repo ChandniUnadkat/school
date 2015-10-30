@@ -1,0 +1,181 @@
+.navbar
+{
+	height: 9rem;
+}
+#topContainer
+{
+	border: 0.5rem solid transparent;
+	border-top: inherit;
+	-webkit-border-image: url(../img/content/bar.png) 30 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(../img/content/bar.png) 30 30 round; /* Opera 11-12.1 */
+    border-image: url(../img/content/bar.png) 30 30 round;
+	position: relative;
+	background: #f9f9f9;
+	.headerButton{
+	  position: absolute;
+	  top: 100%;
+	  left: 3rem;
+	  background:#ac94e9;
+	  color: #fff;
+	  font-size: 2rem;
+	  padding: 1rem;
+	  z-index: 3;
+	  display: none;
+	  border-bottom-right-radius: 0.5rem;
+	  border-bottom-left-radius: 0.5rem;
+	}
+	> div{
+		position: relative;
+	}
+}
+
+.social-icons
+{
+	li{
+		float: left;
+		a 
+		{
+			display: block;
+			width: 5rem;
+			height: 5rem;
+			font-size: 1.5rem;
+			text-align: center;
+			.transition;
+			color: #434a54;
+			line-height: 5rem;
+			&:hover
+			{
+				color: #070606;
+			}
+			i{
+				font-size: 1.8rem;
+			}
+		}
+	}
+	margin-bottom: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	display: inline-block;
+	border-left: 1px solid #ececec;
+	border-right: 1px solid #ececec;
+}
+
+.contact-details
+{
+	height: 5rem;
+	float: right;
+	ul{
+		padding:0;
+		list-style: none;
+		font-family: @primaryFont;
+		font-size: 15px;
+		font-weight: 400;
+		color: #b8bec6;
+		float: left;
+		line-height: 5rem;
+		text-align: center;
+		li 
+		{
+			font-weight: 400;
+			float: left;
+			padding-right: 1.4rem;
+			margin-right: 1.4rem;
+			border-right: 1px solid #ececec;
+			&:first-child
+			{
+				border-left: 1px solid #ececec;
+				padding-left: 1.4rem;
+			}
+			span{
+				margin-right: 15px;
+			}
+		}
+		a{
+			color: #d1d4da;
+			font-weight: 400;
+			&:hover
+			{
+				text-decoration: none;
+			}
+		}
+		span{
+			color: #434a54;
+			font-size: 1.7rem;
+			&:hover
+			{
+				color: #070606;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.dropdown
+{
+	float: right;
+}
+
+.navbar-brand
+{
+	padding: 1.5rem;
+	margin-top: 2rem;
+}
+
+// Here we will add css for header.
+
+@media (max-width: 1620px) {
+	
+}
+
+@media (max-width: 1420px) {
+	
+}
+
+@media (max-width: 1220px) {
+	
+}
+
+@media (max-width: 1030px) {
+	
+}
+
+@media (max-width: 800px) {
+	  .navbar-header button {
+		border: 1px solid #000;
+		width: inherit;
+		margin-top: 4.4rem;
+	}
+	  .navbar-toggle .icon-bar {
+		display: block;
+		width: 22px;
+		height: 2px;
+		border-radius: 1px;
+	}
+	.navbar-header button span {
+  		background-color: #000;
+	}
+	.navbar-collapse {
+	  background: white;
+	  right: 14px;
+	  top: 69px;
+	  min-width: 200px;
+	  padding: 0;
+	}
+	.navbar-collapse ul {
+  		width: 100%;
+	}
+	.navbar-collapse .nav {
+	  margin-top: 0;
+	  margin: 0;
+	}
+}
+
+
+@media (max-width: 500px) {
+	
+}
+
+@media (max-width: 330px) {
+	
+}
